@@ -25,6 +25,7 @@ public class UserController {
         User userA = userRepository.findByUsername(userData.getUsername());
         if (userA != null) {
             if (userA.getPassword().equals(userData.getPassword())) {
+                System.out.println("hello");
                 return true;
             } else {
                 return false;
